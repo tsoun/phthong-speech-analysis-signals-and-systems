@@ -3,7 +3,7 @@ function [] = signalEditing()
     cutOffFrequency = 1500;             % cut off freq for the ideal lowpass
     carrierFrequency = 5000;            % freq of the carrier signal during AM
     
-    x2 = firstPart(x1, rate);
+    x2 = firstPart(x1, rate, cutOffFrequency);
     x3 = secondPart(x2, rate, carrierFrequency);
     x4 = thirdPart(x3, rate, carrierFrequency);
     x5 = lastPart(x4, rate, cutOffFrequency);
